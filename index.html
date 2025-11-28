@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nk luxury collection | Men's Fashion</title>
+  <meta name="description" content="Premium men's fashion – shirts, pants, shoes, and accessories."/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon" with="16" height="auto">
+<!-- ✅ SEO Keywords for Brainy's Collection -->
+<meta name="keywords" content="
+online fashion store,
+affordable clothing,
+trendy outfits,
+fashion shop in Nigeria,
+Brainy's Collection,
+best online fashion store,
+stylish clothes for men and women,
+fashion accessories online,
+buy clothes online,
+online shopping deals,
+fashion boutique,
+clothing website for men,
+clothing website for women,
+modern fashion styles,
+cheap online store,
+new fashion arrivals,
+calaber men fashion,
+men shirts online,
+women tops and blouses,
+designer shirts for men,
+casual shirts online,
+office shirts for men,
+fitted shirts for ladies,
+classic white shirts,
+printed shirts for men,
+trendy t-shirts,
+quality cotton shirts,
+
+stylish trousers for men,
+ladies jeans and pants,
+chinos trousers,
+joggers and tracksuits,
+casual trousers online,
+fitted trousers for men,
+office pants for women,
+affordable jeans online,
+men cargo pants,
+fashion trousers 2025,
+
+sneakers for men,
+sneakers for women,
+leather shoes online,
+affordable footwear,
+high-quality sneakers,
+casual loafers,
+designer shoes online,
+sports shoes for men,
+trending footwear 2025,
+best online shoe store,
+
+fashion wristwatches,
+designer sunglasses,
+quality handbags,
+jewelry online store,
+affordable accessories,
+stylish belts,
+caps and hats,
+fashion bags for ladies,
+
+online fashion store in Nigeria,
+buy shoes in Lagos,
+affordable clothes in Abuja,
+Nigerian fashion trends,
+African fashion styles,
+Nigerian clothing boutique,
+latest outfits in Nigeria,
+fashion online Nigeria,
+
+where to buy affordable fashion online,
+best Nigerian fashion store,
+trendy clothes for men and women 2025,
+online store with fast delivery,
+affordable tracksuits for men,
+best deals on shoes and sneakers,
+stylish outfits for casual wear,
+high-quality fashion at low price
+">
+
+
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* Header */
+    header {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #1a1a1a;
+    }
+    .logo span { color: navy }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      transition: all 0.3s ease;
+    }
+    nav a {
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #d4af37; }
+
+    /* Hamburger Icon */
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    /* Mobile Menu (hidden by default) */
+    .nav-links {
+      display: flex;
+    }
+    .nav-links.active {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background: #fff;
+      width: 100%;
+      padding: 1rem 0;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Hero */
+    .hero {
+      background-image: url(nk.jpg);
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+      padding: 120px 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgb(49, 30, 0);
+      max-width: 100%;
+      margin: 1rem auto;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+    .btn {
+      display: inline-block;
+      background: navy;
+      color: #fff;
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .btn:hover { background: #141412; }
+
+    /* Products */
+    .products {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+    .section-title::after {
+      content: '';
+      width: 60px;
+      height: 3px;
+      background: navy;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .product-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgb(126, 125, 123);
+      transition: transform 0.3s;
+    }
+    .product-card:hover {
+      transform: translateY(-8px);
+    }
+    .tri{
+      display: flex;
+      gap: 20px;
+    }
+    .und{
+      display: flex;
+      gap: 20px;
+    }
+    .product-img {
+      height: 280px;
+      object-fit: cover;
+    }
+    .product-info {
+      padding: 1rem;
+      text-align: center;
+    }
+    .product-info h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .price {
+      font-weight: 600;
+      color:navy;
+      font-size: 1.2rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #1a1a1a;
+      color: #ccc;
+      padding: 3rem 1rem 1rem;
+      margin-top: 4rem;
+    }
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+    .footer-col h3 {
+      color: #fff;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col ul li {
+      margin-bottom: 0.5rem;
+    }
+    .footer-col a:hover {
+      color: #d4af37;
+    }
+    .copyright {
+      text-align: center;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #333;
+      font-size: 0.9rem;
+    }
+    /* Default (desktop) */
+.menu-toggle {
+  display: none; /* hide hamburger on large screens */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* show hamburger */
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none; /* hide links initially */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex; /* show when active */
+  }
+}
+
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav ul {
+        display: none;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">NK Luxury<span>collection</span></div>
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="watch.html">wristwatches</a></li>
+          <li><a href="caps.html">caps</a></li>
+          <li><a href="sneaker">sneakers</a></li>
+          <li><a href="glas.html">eye glass</a></li>
+          <li><a href="perfume.html">perfume</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Kick that speaks your style</h1>
+    <p>Where comfort meets class — premium fashion for every man.</p>
+    <a href="sneaker.html" class="btn">Shop New Arrivals</a>
+  </section>
+
+  <!-- Products -->
+  <section class="products">
+    <h2 class="section-title">Featured Products</h2>
+    <div class="product-grid">
+      <div class="tri">
+      <div class="product-card">
+        <a href="watch.html">
+        <img src="watch 1.jpg" alt="watch" class="product-img">
+        <div class="product-info">
+          <h3>wrist watches</h3>
+          <a href="watch.html"><p class="price">Shop now</p></a>
+        </div>
+        </a>
+      </div>
+
+      <div class="product-card">
+        <a href="easy wears.html">
+        <img src="ea1.jpg" alt="Classic Fashion Shoes" class="product-img">
+        <div class="product-info">
+          <h3>easy wears</h3>
+          <a href="easy wears.html"><p class="price">Shop now</p></a>
+        </div>
+        </a>
+      </div>
+      
+      <div class="product-card">
+        <a href="sneaker.html">
+        <img src="sneak.jpg" alt="Classic Fashion Shoes" class="product-img">
+        <div class="product-info">
+          <h3>high Fashion Sneakers</h3>
+          <a href="sneaker.html"><p class="price">Shop now</p></a>
+        </div>
+        </a>
+      </div>
+      </div>
+
+      <div class="und">
+      <div class="product-card">
+        <a href="glas.html">
+        <img src="glasses.jpg" alt="High fashion glass" class="product-img">
+        <div class="product-info">
+          <h3>High Fashion glasses</h3>
+          <a href="glas.html"><p class="price">Shop now</p></a>
+        </div>
+        </a>
+      </div>
+      <div class="product-card">
+        <a href="perfume.html">
+        <img src="perf.jpg" alt="High fashion tops" class="product-img">
+        <div class="product-info">
+          <h3>quality fragrance</h3>
+          <a href="perfume.html"><p class="price">Shop now</p></a>
+        </div>
+        </a>
+      </div>
+
+      
+     <div class="product-card">
+        <a href="caps.html">
+        <img src="cap.jpg" alt="High fashion tops" class="product-img">
+        <div class="product-info">
+          <h3>High Fashion caps</h3>
+          <a href="caps.html"><p class="price">Shop now</p></a>
+        </div>
+        </a>
+      </div>
+    </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>NK luxury collection</h3>
+        <p>Premium men's fashion delivered to your door. Style. Comfort. Confidence.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="https://wa.me/2347045504919">Contact</a></li>
+          <li><a href="https://wa.me/2347045504919">Location</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="watch.html"> wristwatches</a></li>
+          <li><a href="sneaker.html">Sneakers</a></li>
+          <li><a href="glas.html">eye glass</a></li>
+          <li><a href="perfume.html">perfume</a></li>
+          <li><a href="caps.html">caps</a></li> 
+          <li><a href="easy wears.html"> Easy wears</a></li>
+
+
+          
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Follow Us</h3>
+        <ul>
+         
+          <li><a href="https://www.instagram.com/nk_luxury_collectives?igsh=MWZ2Ynhvb3RpeTZkeQ%3D%3D&utm_source=qr">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@nkorobig?_r=1&_t=ZM-91mOxq8iK9k">tiktok</a></li>
+          <li><a href="https://www.facebook.com/share/1GQBUv2mrr/?mibextid=wwXIfr">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2025 Nk collection. All rights reserved. | calaber, Nigeria
+    </div>
+  </footer>
+
+  <!-- JavaScript for Mobile Menu -->
+  <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+ 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Store",
+  "name": "Brainy's Collection",
+  "url": "https://brainyscollection.shop",
+  "logo": "https://yourdomain.com/images/logo.png",
+  "image": "https://yourdomain.com/images/featured-product.jpg",
+  "description": "Shop trendy shirts, trousers, shoes, and accessories at Brainy's Collection. Affordable fashion, fast delivery.",
+  "sameAs": [
+    "https://www.facebook.com/brainyscollection",
+    "https://www.instagram.com/brainyscollection",
+    "https://twitter.com/brainyscollection"
+  ]
+}
+</script>
+
+</body>
+</html>
